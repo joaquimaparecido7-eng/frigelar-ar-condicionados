@@ -1,0 +1,12 @@
+node_modules
+dist
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.log
+.vercel
+out
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
