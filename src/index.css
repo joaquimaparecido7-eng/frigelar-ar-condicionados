@@ -8,11 +8,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    scroll-padding-top: 72px;
   }
   body {
     @apply bg-white text-slate-800 antialiased;
     font-family: "Inter", system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
   /* Focus visible */
   :focus-visible {

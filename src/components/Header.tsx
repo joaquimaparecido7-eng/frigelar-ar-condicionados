@@ -3,6 +3,7 @@ import { siteConfig, whatsappUrl } from "../lib/site-config";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
@@ -10,8 +11,19 @@ export function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
+    <header
+      className={`sticky top-0 z-40 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85 transition-shadow duration-300 ${
+        scrolled ? "border-slate-200 shadow-sm" : "border-slate-200"
+      }`}
+    >
       <div className="mx-auto flex h-[64px] max-w-[1200px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <a href="#inicio" className="flex items-center gap-3 shrink-0" aria-label="Frigelar Ar Condicionados - início">

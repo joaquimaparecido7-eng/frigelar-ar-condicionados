@@ -1,4 +1,5 @@
 import { siteConfig, whatsappUrl, rotaUrl } from "../lib/site-config";
+import { Reveal } from "./Reveal";
 
 export function Hero() {
   return (
@@ -6,67 +7,70 @@ export function Hero() {
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 py-8 sm:py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-12 xl:py-16">
           {/* Left */}
-          <div className="flex flex-col justify-center">
-            <p className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-medium tracking-[0.06em] text-slate-600">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-600" aria-hidden="true" />
-              CÍCERO DANTAS — BA · LOJA FÍSICA NA AV. ACM, 1264
-            </p>
+          <Reveal>
+            <div className="flex flex-col justify-center">
+              <p className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-medium tracking-[0.06em] text-slate-600">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-600" aria-hidden="true" />
+                CÍCERO DANTAS — BA · LOJA FÍSICA NA AV. ACM, 1264
+              </p>
 
-            <h1 className="mt-5 font-display text-[28px] font-bold leading-[0.98] tracking-[-0.03em] text-brand-950 sm:text-[36px] lg:text-[42px] xl:text-[44px]">
-              Frigelar
-              <span className="block font-display text-[28px] font-medium tracking-[-0.02em] text-slate-700 sm:text-[36px] lg:text-[42px] xl:text-[44px]">Ar Condicionados</span>
-            </h1>
+              <h1 className="mt-5 font-display text-[28px] font-bold leading-[0.98] tracking-[-0.03em] text-brand-950 sm:text-[36px] lg:text-[42px] xl:text-[44px]">
+                Frigelar
+                <span className="block font-display text-[28px] font-medium tracking-[-0.02em] text-slate-700 sm:text-[36px] lg:text-[42px] xl:text-[44px]">Ar Condicionados</span>
+              </h1>
 
-            <p className="mt-4 max-w-[520px] text-[14.5px] leading-6 text-slate-600 sm:text-[15.5px] sm:leading-7">
-              Ar-condicionado, climatização e refrigeração em Cícero Dantas, com atendimento na loja e orientação para o seu ambiente.
-            </p>
+              <p className="mt-4 max-w-[520px] text-[14.5px] leading-6 text-slate-600 sm:text-[15.5px] sm:leading-7">
+                Ar-condicionado, climatização e refrigeração em Cícero Dantas, com atendimento na loja e orientação para o seu ambiente.
+              </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={whatsappUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-[46px] items-center justify-center rounded-full bg-brand-900 px-7 text-[14.5px] font-semibold text-white transition-colors duration-200 hover:bg-brand-800 active:bg-brand-950 focus-visible:ring-2 focus-visible:ring-brand-500"
-              >
-                Falar no WhatsApp
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="ml-2">
-                  <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-              <a
-                href={rotaUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-[46px] items-center justify-center rounded-full border border-slate-300 bg-white px-7 text-[14.5px] font-semibold text-slate-800 transition-colors duration-200 hover:border-slate-400 hover:bg-slate-50 active:bg-slate-100"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="mr-2">
-                  <path d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z" stroke="#0B2A4A" strokeWidth="1.6" />
-                  <path d="M12 21C14.5 17.5 18 13.2 18 10.5C18 7.18629 15.3137 4.5 12 4.5C8.68629 4.5 6 7.18629 6 10.5C6 13.2 9.5 17.5 12 21Z" stroke="#0B2A4A" strokeWidth="1.6" />
-                </svg>
-                Como chegar
-              </a>
-            </div>
-
-            <div className="mt-6 flex items-center gap-4 border-t border-slate-100 pt-5">
-              <div className="flex items-center gap-2 text-[13px] text-slate-600">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-800 text-white">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M12 8.5V12L14.5 14" stroke="white" strokeWidth="1.6" strokeLinecap="round" />
-                    <path d="M12 20C16 20 20 16 20 12C20 8 16 4 12 4C8 4 4 8 4 12C4 16 8 20 12 20Z" stroke="white" strokeWidth="1.5" />
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href={whatsappUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-[46px] items-center justify-center rounded-full bg-brand-900 px-7 text-[14.5px] font-semibold text-white transition-colors duration-200 hover:bg-brand-800 active:bg-brand-950 focus-visible:ring-2 focus-visible:ring-brand-500"
+                >
+                  Falar no WhatsApp
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="ml-2">
+                    <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </span>
-                Atendimento local
+                </a>
+                <a
+                  href={rotaUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-[46px] items-center justify-center rounded-full border border-slate-300 bg-white px-7 text-[14.5px] font-semibold text-slate-800 transition-colors duration-200 hover:border-slate-400 hover:bg-slate-50 active:bg-slate-100"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="mr-2">
+                    <path d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z" stroke="#0B2A4A" strokeWidth="1.6" />
+                    <path d="M12 21C14.5 17.5 18 13.2 18 10.5C18 7.18629 15.3137 4.5 12 4.5C8.68629 4.5 6 7.18629 6 10.5C6 13.2 9.5 17.5 12 21Z" stroke="#0B2A4A" strokeWidth="1.6" />
+                  </svg>
+                  Como chegar
+                </a>
               </div>
-              <span className="h-4 w-px bg-slate-200" aria-hidden="true" />
-              <div className="text-[13px] leading-4 text-slate-600">
-                <span className="block font-semibold text-slate-800">{siteConfig.contato.telefone}</span>
-                <span className="text-[12px]">WhatsApp e telefone</span>
+
+              <div className="mt-6 flex items-center gap-4 border-t border-slate-100 pt-5">
+                <div className="flex items-center gap-2 text-[13px] text-slate-600">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-800 text-white">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 8.5V12L14.5 14" stroke="white" strokeWidth="1.6" strokeLinecap="round" />
+                      <path d="M12 20C16 20 20 16 20 12C20 8 16 4 12 4C8 4 4 8 4 12C4 16 8 20 12 20Z" stroke="white" strokeWidth="1.5" />
+                    </svg>
+                  </span>
+                  Atendimento local
+                </div>
+                <span className="h-4 w-px bg-slate-200" aria-hidden="true" />
+                <div className="text-[13px] leading-4 text-slate-600">
+                  <span className="block font-semibold text-slate-800">{siteConfig.contato.telefone}</span>
+                  <span className="text-[12px]">WhatsApp e telefone</span>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right visual */}
-          <div className="relative">
+          <Reveal delay={150}>
+            <div className="relative">
             <div className="relative overflow-hidden rounded-[14px] border border-slate-200 bg-brand-900 p-6 sm:p-7 lg:min-h-[400px]">
               {/* subtle texture */}
               <div
@@ -154,7 +158,8 @@ export function Hero() {
                 Rota
               </a>
             </div>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { siteConfig } from "../lib/site-config";
+import { Reveal } from "./Reveal";
 
 export function About() {
   return (
@@ -44,22 +45,26 @@ export function About() {
             </div>
           </div>
 
-          {/* Foto real da loja */}
+          {/* Foto real da loja - alta resolução */}
           <div className="relative">
-            <div className="overflow-hidden rounded-[12px] border border-slate-200 bg-white">
-              <img
-                src="/fachada.jpg"
-                alt="Fachada da loja Frigelar Ar Condicionados na Av. Antônio Carlos Magalhães, 1264 - Centro, Cícero Dantas - BA"
-                width={513}
-                height={461}
-                loading="lazy"
-                decoding="async"
-                className="h-auto w-full object-cover"
-              />
-              <div className="border-t border-slate-100 bg-slate-50 px-4 py-3 text-[12px] text-slate-600 sm:px-5">
-                Fachada da loja — Av. Antônio Carlos Magalhães, 1264, Centro
+            <Reveal delay={120}>
+              <div className="overflow-hidden rounded-[12px] border border-slate-200 bg-white shadow-sm">
+                <div className="overflow-hidden">
+                  <img
+                    src="/foto-frente.jpg"
+                    alt="Fachada da loja Frigelar Ar Condicionados na Av. Antônio Carlos Magalhães, 1264 - Centro, Cícero Dantas - BA. Loja com placa azul, vitrine e veículo adesivado."
+                    width={900}
+                    height={809}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-auto w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="border-t border-slate-100 bg-slate-50 px-4 py-3 text-[12px] text-slate-600 sm:px-5">
+                  Fachada da loja — Av. Antônio Carlos Magalhães, 1264, Centro
+                </div>
               </div>
-            </div>
+            </Reveal>
 
             {/* side card */}
             <div className="mt-4 flex items-center gap-3 rounded-[10px] border border-slate-200 bg-slate-50 px-4 py-3">
