@@ -44,32 +44,20 @@ export function About() {
             </div>
           </div>
 
-          {/* Visual placeholder */}
+          {/* Foto real da loja */}
           <div className="relative">
             <div className="overflow-hidden rounded-[12px] border border-slate-200 bg-white">
-              {/* top label */}
-              <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-4 py-3 sm:px-5">
-                <span className="text-[11px] font-medium tracking-[0.08em] text-slate-500">FOTO DA LOJA</span>
-                <span className="text-[11px] text-slate-400">Espaço reservado</span>
-              </div>
-
-              {/* placeholder area */}
-              <div className="relative aspect-[4/3] bg-slate-50 p-6 sm:p-7 lg:aspect-[1.15/1]">
-                <div className="flex h-full flex-col justify-center rounded-[10px] border border-slate-200 bg-white p-6">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-white">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M4 16L8.5 10.5L12 14L15 11L20 16" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <circle cx="15.5" cy="8.5" r="2" stroke="white" strokeWidth="1.5" />
-                        <rect x="4" y="5" width="16" height="13" rx="2" stroke="white" strokeWidth="1.5" />
-                      </svg>
-                    </span>
-                    <p className="text-[13px] font-semibold text-slate-900">Espaço reservado para foto da loja</p>
-                  </div>
-                  <p className="mt-3 text-[13px] leading-5 text-slate-600">
-                    Fachada, interior ou equipe — assim que a foto chegar, ela entra aqui.
-                  </p>
-                </div>
+              <img
+                src="/fachada.jpg"
+                alt="Fachada da loja Frigelar Ar Condicionados na Av. Antônio Carlos Magalhães, 1264 - Centro, Cícero Dantas - BA"
+                width={513}
+                height={461}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full object-cover"
+              />
+              <div className="border-t border-slate-100 bg-slate-50 px-4 py-3 text-[12px] text-slate-600 sm:px-5">
+                Fachada da loja — Av. Antônio Carlos Magalhães, 1264, Centro
               </div>
             </div>
 
